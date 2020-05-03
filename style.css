@@ -1,0 +1,33 @@
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    height: 380px;
+    align-content: center;
+    width: 400px;
+    margin: auto;
+  
+  border: 3px solid black;
+  padding: 10px;
+}
+#result {
+    font-weight: bold;
+    font-size: 28;
+    color: rgb(43, 226, 211);
+    
+}
+
+h3 {
+    font-size: 28;
+    color: rgb(43, 226, 211);
+}
+h1{
+    font-size: 24;
+    font-weight: bold;
+    font-family: fantasy;
+    color: rgb(43, 226, 211);
+    text-align: center;
+}
+*{
+    background-image: url('images/cat.jpg');
+}
+
