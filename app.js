@@ -149,7 +149,7 @@ document.addEventListener('DOMContentLoaded',() =>
         
         if(chosenCards.length ===2){
             
-            setTimeout(checkForMatch,50)
+            setTimeout(checkForMatch,100)
         }
        
         
