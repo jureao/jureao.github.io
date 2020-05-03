@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded',() =>
+ddocument.addEventListener('DOMContentLoaded',() =>
 {
     const cardArray = [
         {
@@ -95,12 +95,13 @@ document.addEventListener('DOMContentLoaded',() =>
 
         }
     }
+   
 
     function checkForMatch(){
         var cards = document.querySelectorAll('img')
         const cardOneId = chosenId[0]
         const cardTwoId = chosenId[1]
-
+        if(cardOneId !==cardTwoId){
         if(chosenCards[0] === chosenCards[1]){
             alert('You found a Match')
             cards[cardOneId].setAttribute('src','images/white.png')
@@ -114,30 +115,44 @@ document.addEventListener('DOMContentLoaded',() =>
      
         } 
         else{
-           alert('This cards dont match')
+           alert('These cards dont match')
+           
             cards[cardOneId].setAttribute('src','images/blank.png')
             cards[cardTwoId].setAttribute('src','images/blank.png')
+        
             
         }
+    }
+    else{
+
+        alert("Same Cards")
+        cards[cardOneId].setAttribute('src','images/blank.png')
+        cards[cardTwoId].setAttribute('src','images/blank.png')
+
+
+    }
+        
         if(matchingCards.length === cardArray.length/2){
             resultDisplay.textContent= 'Congratulations! You found them all'
         }
         chosenCards = []
         chosenId = []
         
-
-
     }
     function flipCard(){
-        setTimeout
         var cardId = this.getAttribute('id')
         chosenCards.push(cardArray[cardId].name)
         chosenId.push(cardId)
         this.setAttribute('src',cardArray[cardId].img)
-        this.style.pointerEvents='none'
+       
+      
+        
         if(chosenCards.length ===2){
+            
             setTimeout(checkForMatch,50)
         }
+       
+        
 
 
     }
