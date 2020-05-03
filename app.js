@@ -1,4 +1,4 @@
-ddocument.addEventListener('DOMContentLoaded',() =>
+document.addEventListener('DOMContentLoaded',() =>
 {
     const cardArray = [
         {
